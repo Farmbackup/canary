@@ -3,7 +3,7 @@ defmodule Canary.Mixfile do
 
   def project do
     [app: :canary,
-     version: "1.1.1",
+     version: "1.1.2",
      elixir: "~> 1.2",
      package: package(),
      description: """
@@ -29,13 +29,11 @@ defmodule Canary.Mixfile do
 
   defp deps do
     [
-     {:ecto, ">= 1.1.0"},
-     {:canada, "~> 1.0.1"},
+      {:ecto, github: "Farmbackup/ecto", branch: "v2.2-decimal-float"},
      {:plug, "~> 1.0"},
      {:ex_doc, "~> 0.7", only: :dev},
      {:earmark, ">= 0.0.0", only: :dev},
      {:mock, ">= 0.0.0", only: :test},
-
      {:credo, "~> 0.5", only: [:dev, :test]}
     ]
   end

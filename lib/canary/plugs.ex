@@ -1,5 +1,5 @@
 defmodule Canary.Plugs do
-  import Canada.Can, only: [can?: 3]
+  import Canary.Canada.Can, only: [can?: 3]
   import Ecto.Query
   import Keyword, only: [has_key?: 2]
 
