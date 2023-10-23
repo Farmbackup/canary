@@ -434,7 +434,7 @@ defmodule Canary.Plugs do
       end
     resource_name = Map.get(conn.assigns, get_resource_name(conn, opts))
 
-    if is_nil(resource_name) and not action in non_id_actions do
+    if is_nil(resource_name) and (action not in non_id_actions) do
       apply_error_handler(conn, :not_found_handler, opts)
     else
       conn
