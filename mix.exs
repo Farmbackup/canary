@@ -29,7 +29,7 @@ defmodule Canary.Mixfile do
 
   defp deps do
     [
-      {:ecto, github: "Farmbackup/ecto", branch: "v2.2-decimal-float"},
+     {:ecto, "~> 3.10"},
      {:plug, "~> 1.0"},
      {:ex_doc, "~> 0.7", only: :dev},
      {:earmark, ">= 0.0.0", only: :dev},
